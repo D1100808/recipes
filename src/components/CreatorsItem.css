@@ -1,0 +1,29 @@
+.container {
+    padding: 10px;
+    justify-content:center;
+    display:flex;
+}
+
+.container a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #292929;
+    padding:5px;
+    border-radius:15px;
+    width: 520px;
+}
+
+.user_image {
+    padding: 10px;
+}
+
+.user_image img{
+    border-radius: 50%;
+    width: 25%;
+    height: 25%;
+}
+
+.user_name {
+    font-weight: bold;
+}
