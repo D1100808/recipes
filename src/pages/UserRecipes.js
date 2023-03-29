@@ -1,5 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
+import CreatorItem from '../components/CreatorItem';
+import CreatorsList from '../components/CreatorsList';
+import MainList from './MainPage/MainList';
 
 
 
@@ -24,7 +27,7 @@ const DATA_RECIPES = [
       "Перец чёрный молотый - по вкусу",
       "Соль - по вкусу",
     ],
-    imgURL: "https://www.patee.ru/r/x6/19/ec/c9/640m.jpg",
+    imageURL: "https://www.patee.ru/r/x6/19/ec/c9/640m.jpg",
     creator:'u1'
   },
   {
@@ -41,7 +44,7 @@ const DATA_RECIPES = [
       "Мука - 100 гр",
       "Колбаса полукопченая - 100 гр",
     ],
-    imgURL:
+    imageURL:
       "https://static.1000.menu/img/content-v2/08/f3/21103/picca-v-duxovke-s-kolbasoi-i-syrom_1616655833_29_max.jpg",
     creator:'u2'
   },
@@ -50,10 +53,11 @@ const DATA_RECIPES = [
 
 function UserRecipes() {
   const userId = useParams().userId
-  const loadedUser = DATA_RECIPES.filter(recipe => recipe.id === userId)
-  console.log(loadedUser);
+  const loadedUser = DATA_RECIPES.filter(recipe => recipe.creator === userId)
   return (
-    <div>UserRecipes</div>
+    <div>
+      <MainList items={loadedUser}/>
+    </div>
   )
 }
 

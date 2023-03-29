@@ -1,0 +1,33 @@
+.info{
+    background-color: #292929;
+    width: 30%;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 40;
+}
+
+.info a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
+.info a:hover{
+    background-color:yellowgreen;
+    color: white;
+    border-radius: 10px;
+}
+
+.user_image img{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+.user_name h5 {
+    padding-right: 20px;
+}

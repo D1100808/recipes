@@ -1,0 +1,73 @@
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form{
+    margin-top: 200px;
+    background-color: #292929;
+    color: white;
+    padding: 40px 50px;
+    border-radius: 10px;
+    justify-content: center;
+    width: 350px;
+}
+
+form > h3{
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+hr{
+    margin: 25px 0;
+    width: 100%;
+}
+
+input{
+    display: block;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-width: 0;
+    cursor:default;
+}
+
+button{
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #292929;
+    color: white;
+    border: 1px solid gray;
+    padding: 8px 10px;
+}
+
+button:hover{
+    background-color: dimgray;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.checkbox input{
+    width: 18px;
+    height: 15px;
+}
+
+.checkbox label{
+    font-size: 14px;
+    margin-left: 5px;
+}

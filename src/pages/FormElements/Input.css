@@ -1,0 +1,14 @@
+.invalid-form label,
+.invalid-form p {
+    color: red;
+}
+
+.invalid-form input,
+.invalid-form textarea{
+    border-color: red;
+    background-color: #ffd1d1;
+}
+
+.valid-form{
+    color: white;
+}

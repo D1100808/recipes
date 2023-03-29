@@ -1,0 +1,46 @@
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.grid-container > div {
+    background-color:#292929;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+}
+
+.item-1{
+    grid-column: 1/ span 4;
+}
+
+.item-1 h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.item-2 {
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+
+.item-3 {
+    grid-row: 2/ span 16;
+    grid-column: 3/span 2;
+    
+}
+
+.item-3 > ol > li{
+    width: 200px;
+    padding: 5px;
+    margin: 3px;
+}

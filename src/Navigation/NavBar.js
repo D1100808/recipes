@@ -1,21 +1,31 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React, { useContext } from 'react'
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../context/auth-context';
+
+import './NavBar.css'
 function NavBar() {
+  const auth = useContext(AuthContext)
+  
     return (
-      <>
-        <Navbar bg="primary" variant="dark">
-          <Container>
-            <Navbar.Brand href="#home">Еда</Navbar.Brand>
-            <Nav className="me-auto" style={{ marginLeft: 25 }}>
-              <Nav.Link href="/">Главная</Nav.Link>
-              <Nav.Link href="/:userId/recipes">Рецепты от лучших поваров</Nav.Link>
-              <Nav.Link href="/auth">Регистрация</Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
-      </>
+      <div className='main'>
+        <div className="title">
+          <h2>Recipes</h2>
+        </div>
+        <ul className="nav">
+          <li>
+            <NavLink to="/">Главная</NavLink>
+          </li>
+          {auth.isLoggedIn && <li>
+            <NavLink to="/creators">Рецепты от лучших поваров</NavLink>
+          </li>}
+          <li>
+            <NavLink to="/auth">Регистрация</NavLink>
+          </li>
+          {auth.isLoggedIn && <li>
+            <button onClick={auth.logout}>Выход</button>
+          </li>}
+        </ul>
+      </div>
     );
 }
 
